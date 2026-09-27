@@ -1,0 +1,15 @@
+{
+  "name": "aiball",
+  "description": "AI Ball's football match analysis skill for Claude Code.",
+  "owner": {
+    "name": "AI Ball",
+    "url": "https://aiball.samagent.ai/en/?src=gh"
+  },
+  "plugins": [
+    {
+      "name": "aiball-football-analysis",
+      "source": "./",
+      "description": "Football match analysis from AI Ball: outcome probabilities captured before kick-off and an open record of how they held up."
+    }
+  ]
+}

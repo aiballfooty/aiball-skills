@@ -1,0 +1,60 @@
+Copyright (c) 2026 AI Ball (aiball.samagent.ai)
+
+The documentation in this repository is licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+WHAT THIS COVERS
+
+  The prose, tables and configuration files in this repository: README.md,
+  PRIVACY.md, everything under docs/ and skills/, and the manifest files
+  .mcp.json, server.json and .claude-plugin/plugin.json.
+
+WHAT THIS DOES NOT COVER
+
+  This licence grants no rights in anything outside this repository. In
+  particular it does not cover:
+
+  - the AI Ball software, models, weightings or data pipeline, none of which
+    are published here or anywhere else;
+  - the match data, probabilities, records and any other content served by
+    aiball.samagent.ai or by the MCP endpoint, which remain subject to the
+    site's terms of service;
+  - the AI Ball name and logo, which are not licensed here.
+
+  Reading this repository does not grant permission to redistribute data
+  retrieved from the endpoint as a dataset. If that is what you want, ask:
+  https://aiball.samagent.ai/en/contact
+
+YOU ARE FREE TO
+
+  - Share — copy and redistribute the material in any medium or format
+  - Adapt — remix, transform, and build upon the material
+
+  for any purpose, even commercially.
+
+UNDER THE FOLLOWING TERMS
+
+  - Attribution — You must give appropriate credit, provide a link to this
+    repository, and indicate if changes were made. You may do so in any
+    reasonable manner, but not in any way that suggests AI Ball endorses you
+    or your use.
+
+  - No additional restrictions — You may not apply legal terms or
+    technological measures that legally restrict others from doing anything
+    the licence permits.
+
+NOTICES
+
+  You do not have to comply with the licence for elements of the material in
+  the public domain or where your use is permitted by an applicable exception
+  or limitation.
+
+  No warranties are given. The licence may not give you all of the permissions
+  necessary for your intended use. For example, other rights such as publicity,
+  privacy, or moral rights may limit how you use the material.
+
+This is a human-readable summary of, and not a substitute for, the licence.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary:          https://creativecommons.org/licenses/by/4.0/
+SPDX-License-Identifier: CC-BY-4.0

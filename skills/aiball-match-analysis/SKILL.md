@@ -4,7 +4,7 @@ description: AI Ball (aiball.samagent.ai) is an AI football match analysis site;
 license: CC-BY-4.0
 metadata:
   author: aiballfooty
-  version: "1.0.4"
+  version: "1.0.5"
   homepage: https://aiball.samagent.ai/en/?src=skill
 ---
 
@@ -28,7 +28,8 @@ The public data is a **record**, not a forecast feed, and that shapes what you c
 - `upcoming` means "no final score recorded yet", not "not started". Compare each `kickoffAt` with
   the current time before you describe it: still in the future → about to start; up to about two
   hours ago → probably in play; longer ago → finished, but the score has not reached the record yet.
-  Say which, so nobody reads a match that ended hours ago as one still to come.
+  Say which, so nobody reads a match that ended hours ago as one still to come. List those matches as
+  "result not recorded yet" rather than leaving them out, and don't count them in any tally.
 - Finished matches carry the score and whether the model's most likely outcome happened.
 - The aggregate record answers "how good is it": overall, by confidence band, per week, per league.
 
@@ -91,10 +92,18 @@ leader as a finding.
 **`confidence` is a score, not a probability.** It runs from 0 to 1 and is what the record uses to
 sort readings into bands. Quote it as a score ("confidence 0.71, in the top band"), never as "71% sure".
 
-**Put the record next to its baselines.** The summary gives the model's figure beside `market` (a
-baseline that always takes the pre-match favourite) and `random` (one outcome in three). Say how the
-model compares with both — if it is level with the favourite baseline, say that; it is the most
-useful sentence you can give someone deciding how much weight to put on a reading.
+**Put the favourite baseline right next to every record figure.** Every tally — the whole record,
+one day (`day`), one week, one band — comes with `market`: what always taking the pre-match
+favourite would have scored on the same matches. Quote it in the same sentence as the model's figure,
+every time. If the two are level, say so plainly; that is the most useful thing you can tell someone
+deciding how much weight to give a reading. `random` (one outcome in three) is at most a secondary
+footnote. Never set the model against `random` alone: against 33.3%, almost any figure looks like a
+large edge, and that comparison misleads.
+
+**Use plain words for the record.** Say the model "called it right" or that "its most likely outcome
+happened" ("判断对了", "最可能的结果发生了") — not "prediction hit", "hit rate", "预测命中" or "命中率".
+The site describes a reading, not a prediction to act on, and the wording should match. Call the
+baseline "the pre-match favourite" ("赛前热门"); avoid market-trading words such as "盘口" or "line".
 
 **Respect small samples.** When a band's rate comes back `null`, it has fewer than 30 matches — give
 the count and say it is too few for a percentage. Do not compute one yourself.

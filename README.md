@@ -1,10 +1,11 @@
 # AI Ball — football match analysis skill
 
-An [Agent Skill](https://agentskills.io) that lets an AI assistant look up
-[AI Ball](https://aiball.samagent.ai/en/?src=gh)'s football match analysis: home / draw / away
-probabilities captured before kick-off, the final scores beside them, and the open record of how those
-readings have held up — overall, by confidence band, by week and by competition, next to simple
-baselines.
+AI Ball (aiball.samagent.ai) is an AI football match analysis site. For each fixture it shows win/draw/loss probabilities from six models, the data behind them — head-to-head, form, injuries, fixtures — and an AI analyst you can ask where any number comes from.
+
+This repository is an [Agent Skill](https://agentskills.io) that lets an AI assistant read AI Ball's
+open record: home / draw / away probabilities captured before kick-off, the final scores beside them,
+and how those readings have held up — overall, by confidence band, by week and by competition, next
+to simple baselines.
 
 It reads AI Ball's public, read-only JSON endpoints. No account, no API key, nothing to run.
 

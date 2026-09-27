@@ -1,10 +1,10 @@
 ---
 name: aiball-match-analysis
-description: Look up AI football match analysis from AI Ball (aiball.samagent.ai) through its public, read-only JSON endpoints — no account or API key. Covers today's fixtures with home/draw/away probabilities, results of recent matches against what the model expected, and AI Ball's open record (how often the model's most likely outcome happened, by confidence band, league and week, next to simple baselines). Use it whenever someone asks how likely a result is in a football/soccer match being played today, who a model rates higher, what AI Ball says about a fixture, how AI Ball's forecasts have held up, or which competitions it covers — even if they only say "who will win X vs Y tonight" or "is this AI football site any good". It reports all three outcome probabilities with their uncertainty and never tells anyone which side to choose.
+description: AI Ball (aiball.samagent.ai) is an AI football match analysis site; this skill reads its public, read-only JSON endpoints — no account or API key. Covers today's fixtures with home/draw/away probabilities, results of recent matches against what the model expected, and AI Ball's open record (how often the model's most likely outcome happened, by confidence band, league and week, next to simple baselines). Use it whenever someone asks how likely a result is in a football/soccer match being played today, who a model rates higher, what AI Ball says about a fixture, how AI Ball's forecasts have held up, or which competitions it covers — even if they only say "who will win X vs Y tonight" or "is this AI football site any good". It reports all three outcome probabilities with their uncertainty and never tells anyone which side to choose.
 license: CC-BY-4.0
 metadata:
   author: aiballfooty
-  version: "1.0.2"
+  version: "1.0.3"
   homepage: https://aiball.samagent.ai/en/?src=skill
 ---
 

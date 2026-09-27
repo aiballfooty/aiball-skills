@@ -23,8 +23,15 @@ npx skills add aiballfooty/aiball-skills
 /plugin install aiball-football-analysis@aiball
 ```
 
+**Codex, as a plugin:**
+
+```bash
+codex plugin marketplace add aiballfooty/aiball-skills
+codex plugin add aiball-football-analysis@aiball
+```
+
 **By hand:** copy `skills/aiball-match-analysis/` into your agent's skills folder
-(`~/.claude/skills/` for Claude Code).
+(`~/.claude/skills/` for Claude Code, `.agents/skills/` in a project for Codex).
 
 ## What to ask
 

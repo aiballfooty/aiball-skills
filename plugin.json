@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aiball-football-analysis",
+  "version": "1.0.2",
+  "description": "Football match analysis from AI Ball (aiball.samagent.ai): home/draw/away probabilities captured before kick-off, final scores beside them, and an open record of how the readings have held up. Read-only public data, no account needed.",
+  "author": { "name": "AI Ball", "url": "https://aiball.samagent.ai/en/contact?src=gh" },
+  "homepage": "https://aiball.samagent.ai/en/?src=gh",
+  "repository": "https://github.com/aiballfooty/aiball-skills",
+  "license": "CC-BY-4.0",
+  "keywords": ["football", "soccer", "sports", "analytics", "match-analysis", "probabilities", "open-record"]
+}

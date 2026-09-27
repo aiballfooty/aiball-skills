@@ -1,6 +1,6 @@
 {
   "name": "aiball-football-analysis",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Football match analysis from AI Ball (aiball.samagent.ai): home/draw/away probabilities captured before kick-off, final scores beside them, and an open record of how the readings have held up. Read-only public data, no account needed.",
   "author": {
     "name": "AI Ball",

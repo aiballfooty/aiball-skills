@@ -108,27 +108,42 @@ no names in it.
 ```json
 {
   "since": "2026-08-27",
-  "until": "2026-09-27T00:30:00Z",
   "minBucketSample": 30,
   "n": 473, "hits": 274, "hitRate": 57.9,
   "market": { "n": 473, "hits": 272, "hitRate": 57.5 },
   "random": { "n": 473, "hits": 158, "hitRate": 33.3 },
   "buckets": [
-    { "key": "lt45",   "n": 51,  "hits": 23, "hitRate": 45.1 },
-    { "key": "45to55", "n": 202, "hits": 93, "hitRate": 46.0 },
-    { "key": "55to65", "n": 110, "hits": 70, "hitRate": 63.6 },
-    { "key": "gte65",  "n": 110, "hits": 88, "hitRate": 80.0 }
+    { "key": "lt50", "n": 179, "hits": 84, "hitRate": 46.9, "highlighted": false,
+      "market": { "n": 179, "hits": 82, "hitRate": 45.8 } },
+    { "key": "50to55", "n": 74, "hits": 32, "hitRate": 43.2, "highlighted": true,
+      "market": { "n": 74, "hits": 32, "hitRate": 43.2 } },
+    { "key": "55to60", "n": 68, "hits": 39, "hitRate": 57.4, "highlighted": true,
+      "market": { "n": 68, "hits": 39, "hitRate": 57.4 } },
+    { "key": "60to70", "n": 70, "hits": 50, "hitRate": 71.4, "highlighted": true,
+      "market": { "n": 70, "hits": 50, "hitRate": 71.4 } },
+    { "key": "gte70", "n": 82, "hits": 69, "hitRate": 84.1, "highlighted": true,
+      "market": { "n": 82, "hits": 69, "hitRate": 84.1 } }
   ],
+  "subtotal": { "key": "gte50", "n": 294, "hits": 190, "hitRate": 64.6,
+    "market": { "n": 294, "hits": 190, "hitRate": 64.6 } },
+  "disagreement": { "n": 26, "modelHits": 11, "marketHits": 9, "highlightedN": 0 },
   "snapshots": { "auto": 55, "backfill": 418 },
   "lockedSince": "2026-09-20T17:09:02Z"
 }
 ```
 
 - Band keys are ranges of the `confidence` score, and the key spells the range: `ltNN` is below
-  0.NN, `NNtoMM` is 0.NN up to 0.MM, `gteNN` is 0.NN and above (so `lt45` is below 0.45 and `gte65`
-  is 0.65 and above). **The set of bands can change** — read them from the response rather than
-  assuming the four shown here. A well-behaved record has higher rates in higher bands; say whether
-  it does.
+  0.NN, `NNtoMM` is 0.NN up to 0.MM, `gteNN` is 0.NN and above (currently `lt50`, `50to55`,
+  `55to60`, `60to70`, `gte70`). **The set of bands can change** — read them from the response
+  rather than assuming the ones shown here. A well-behaved record has higher rates in higher bands;
+  say whether it does.
+- Each band carries its own `market` figures (the favourite baseline on the same matches).
+  `highlighted` marks the bands at or above 0.50, where the site treats the model as confident
+  enough to make a call; `subtotal` sums them.
+- `disagreement` counts the matches where the model's most likely outcome differed from the pre-match
+  favourite: how many, how often each side was right, and how many of those were in highlighted
+  bands. When the two columns look identical, this is the explanation — say so rather than implying
+  the model adds something the baseline doesn't.
 - `snapshots` — how many readings were captured before kick-off by the scheduled job (`auto`) versus
   reconstructed from history before the record page launched (`backfill`). `lockedSince` is when the
   scheduled capture started. Only `auto` readings prove they predate kick-off.

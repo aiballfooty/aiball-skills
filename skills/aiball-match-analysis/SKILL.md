@@ -4,7 +4,7 @@ description: Look up AI football match analysis from AI Ball (aiball.samagent.ai
 license: CC-BY-4.0
 metadata:
   author: aiballfooty
-  version: "1.0.1"
+  version: "1.0.2"
   homepage: https://aiball.samagent.ai/en/?src=skill
 ---
 

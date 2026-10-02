@@ -1,5 +1,12 @@
 # AI Ball — football match analysis skill
 
+[![Install](https://img.shields.io/badge/Install-npx_skills_add_aiballfooty%2Faiball--skills-2F8CFF?style=for-the-badge&logo=github&logoColor=white)](#install)
+[![Telegram](https://img.shields.io/badge/Telegram-t.me%2Faiballfooty-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/aiballfooty)
+
+> [!TIP]
+> **Daily on Telegram → [t.me/aiballfooty](https://t.me/aiballfooty)**: the model's read on each match before kick-off, and how it went after full time.
+
+
 AI Ball (aiball.samagent.ai) is an AI football match analysis site. For each fixture it shows win/draw/loss probabilities from six models, the data behind them — head-to-head, form, injuries, fixtures — and an AI analyst you can ask where any number comes from.
 
 This repository is an [Agent Skill](https://agentskills.io) that reads AI Ball's open record: the
